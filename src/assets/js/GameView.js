@@ -37,7 +37,7 @@ class GameView extends EventEmitter {
     this.renderPlayer(p);
     this.renderTarget(t);
 
-    requestAnimationFrame(this.emit.bind(this, 'update'));
+    this.renderId = requestAnimationFrame(this.emit.bind(this, 'update'));
   }
 
   renderPlayer(p) {

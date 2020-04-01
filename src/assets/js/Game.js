@@ -1,7 +1,7 @@
 import Player from './Player';
 import Target from './Target';
 import { getRandomValue, EventEmitter } from './helpers';
-const gameTime = 60;
+const gameTime = 5;
 
 class GameModel extends EventEmitter {
   constructor(width, heigtht) {
@@ -86,6 +86,8 @@ class GameModel extends EventEmitter {
   finish() {
     clearInterval(this.timerID);
     this.timer.isFinished = true;
+    this.dropSpeed('X');
+    this.dropSpeed('Y');
   }
 
   tick() {
