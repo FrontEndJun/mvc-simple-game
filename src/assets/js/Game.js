@@ -1,7 +1,7 @@
 import Player from './Player';
 import Target from './Target';
 import { getRandomValue, EventEmitter } from './helpers';
-const gameTime = 5;
+const gameTime = 60;
 
 class GameModel extends EventEmitter {
   constructor(width, heigtht) {
